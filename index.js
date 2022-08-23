@@ -26,6 +26,10 @@ class CEP {
     removeCep(id) {
         this._cep.splice(id, 1)
     }
+
+    removeAll() {
+        this._cep = []
+    }
 }
 
 let cepClass = new CEP()
@@ -35,8 +39,8 @@ const
     cepBody = document.getElementById("list_cep"),
     inpSearch = document.getElementById("search_inp"),
     btnSearch = document.getElementById("search_btn"),
-    txtTitle = document.getElementById("title")
-
+    txtTitle = document.getElementById("title"),
+    btnDeleteAll = document.getElementById("delete_all")
 
 $("#search_inp").mask("00000-000")
 
@@ -48,6 +52,11 @@ btnSearch.addEventListener("click", function (e) {
     fetchCep(cep)
 
     inpSearch.value = null
+})
+
+btnDeleteAll.addEventListener("click", function () {
+    cepClass.removeAll()
+    createTable(cepClass.cep)
 })
 
 function fetchCep(cep) {
@@ -76,9 +85,11 @@ function createTable(array) {
     if (array.length === 0) {
         txtTitle.textContent = "Busque algum CEP"
         cepTable.style.display = "none"
+        btnDeleteAll.style.display = "none"
     } else {
         txtTitle.textContent = "Lista de CEPs"
         cepTable.style.display = "table"
+        btnDeleteAll.style.display = "flex"
 
         for (let i = 0; i < array.length; i++) {
             addRow(array[i], i)

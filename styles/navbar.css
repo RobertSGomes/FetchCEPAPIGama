@@ -38,6 +38,7 @@ nav ul li input[type="search"] {
     border: none;
 
     height: 30px;
+    padding: 0 15px;
 
     border-radius: 5px;
 }
