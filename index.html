@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama - FetchAPI</title>
+
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/content.css">
+
+    <script src="https://kit.fontawesome.com/026f9cfb0e.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="logo">FetchAPI - GAMA</li>
+            <li>
+                <input type="search" id="search_inp">
+                <button type="submit" id="search_btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <!-- <h1>Busca CEP - GamaAcademy</h1> -->
+        <div class="header">
+            <span id="title">Busque algum CEP</span>
+        </div>
+        <table id="cep_table">
+            <thead>
+                <tr>
+                    <th>CEP</th>
+                    <th>Logradouro</th>
+                    <th>Bairro</th>
+                    <th>Cidade</th>
+                    <th>UF</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="list_cep"></tbody>
+        </table>
+    </section>
+
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

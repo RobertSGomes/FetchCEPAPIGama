@@ -1,0 +1,43 @@
+nav {
+    grid-area: nav;
+
+    background: var(--background-pri);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    height: 100%;
+    padding: 0 50px;
+
+    color: white;
+}
+
+nav ul li.logo {
+    font-weight: 700;
+}
+
+nav ul li button {
+    border: none;
+    outline: none;
+
+    height: 30px;
+    width: 30px;
+
+    border-radius: 5px;
+
+    background: white;
+    color: #333;
+}
+
+nav ul li input[type="search"] {
+    outline: none;
+    border: none;
+
+    height: 30px;
+
+    border-radius: 5px;
+}
