@@ -4,6 +4,9 @@ section {
     justify-content: center;
 
     height: 100vh;
+    width: 100%;
+
+    position: relative;
 }
 
 section .signin {

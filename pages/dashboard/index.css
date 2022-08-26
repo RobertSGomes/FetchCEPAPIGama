@@ -1,0 +1,186 @@
+section {
+    display: grid;
+    grid-template-columns: 65px auto 500px;
+    grid-template-rows: 65px auto;
+    grid-template-areas: "nav nav nav"
+        "side fetch list";
+
+    height: 100vh;
+    width: 100%;
+}
+
+section .navbar {
+    grid-area: nav;
+
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+    border-bottom: 1px solid #CCD1CF;
+}
+
+section .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+}
+
+section .navbar ul div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+section .navbar ul div .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+}
+
+section .navbar ul i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    color: white;
+    border-radius: 10px;
+    border: 3px solid var(--purple);
+    background-color: var(--purple);
+}
+
+section .navbar ul li:not(div li) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 0 15px;
+}
+
+section .navbar ul li:not(div li) span {
+    color: #505050;
+}
+
+section .navbar ul i:not(.logo i):hover {
+    border: 3px solid var(--green);
+    background-color: var(--green);
+
+    cursor: pointer;
+}
+
+section .navbar ul div button {
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+section .navbar ul div input {
+    height: 35px;
+
+    padding: 10px 15px;
+
+    outline: none;
+    border: 3px solid var(--purple);
+    border-radius: 10px;
+}
+
+section .navbar ul div input:focus {
+    border: 3px solid var(--green);
+}
+
+section .sidebar {
+    grid-area: side;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 25px 0;
+
+    background-color: #F5F5F5;
+    border-right: 1px solid #CCD1CF;
+}
+
+section .sidebar li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    color: white;
+    border-radius: 10px;
+    border: 3px solid var(--green);
+    background-color: var(--green);
+
+    cursor: pointer;
+}
+
+section .sidebar li i:hover {
+    border: 3px solid var(--purple);
+    background-color: var(--purple);
+}
+
+.fetch {
+    grid-area: fetch;
+
+    padding: 50px;
+
+    overflow-y: auto;
+}
+
+.fetch .fetch-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.fetch .fetch-header i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    background: lightcoral;
+    color: white;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.fetch .fetch-header i:hover {
+    background: red;
+}
+
+.fetch #cep-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.fetch .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    width: 100%;
+
+    padding: 50px;
+
+    border-radius: 10px;
+    border: 1px solid #CCD1CF;
+}

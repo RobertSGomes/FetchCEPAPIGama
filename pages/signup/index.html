@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar - BuscaCEP</title>
+    <title>Cadastrar - BuscaCEP</title>
 
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="./index.css">
 
     <script src="https://kit.fontawesome.com/026f9cfb0e.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.22.2/sweetalert2.min.css"
@@ -20,22 +20,23 @@
     <section>
         <div class="signin">
             <div class="signin-image">
-                <img src="./assets/signin.png" width="100%" alt="signin-logo">
+                <img src="../../assets/signin.png" width="100%" alt="signin-logo">
             </div>
             <form class="signin-form">
                 <h1 class="title">Busca<span>CEP</span></h1>
 
-                <input type="text" placeholder="Nome completo" id="user-login">
-                <input type="password" placeholder="Senha" id="user-password">
-                <button type="submit" id="handle-signin">Entrar</button>
+                <input type="text" placeholder="Nome completo" id="user-login" required>
+                <input type="email" placeholder="Melhor e-mail" id="user-email" required>
+                <input type="password" placeholder="Senha" id="user-password" required>
+                <input type="password" placeholder="Confirmar senha" id="user-confirm-password" required>
+                <button type="submit" id="handle-signup">Cadastrar</button>
 
-                <span>Não cadastrado? <a href="./pages/signup/index.html">Criar sua conta</a>.</span>
+                <span>Já tem conta? <a href="../../index.html">Entrar</a>.</span>
             </form>
         </div>
     </section>
-
-
-    <script type="module" src="index.js"></script>
 </body>
+
+<script type="module" src="index.js"></script>
 
 </html>
