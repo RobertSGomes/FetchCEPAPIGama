@@ -7,7 +7,8 @@ $("#cep-search").mask("00000-000")
 if (!localStorage.getItem("currentUser")) {
     window.location.href = "../../index.html"
 } else {
-    const userName = document.querySelector("#user-name")
+    const userName = document.querySelector("#user-name"),
+        btnLogOut = document.querySelector("#logout")
 
     let name = localStorage.getItem("currentUser")
 
@@ -33,5 +34,15 @@ if (!localStorage.getItem("currentUser")) {
         }
 
         searchInp.value = null
+    })
+
+    btnLogOut.addEventListener("click", function () {
+        let users = JSON.parse(localStorage.getItem("cepUsers"))
+        let ceps = JSON.parse(localStorage.getItem("cepList"))
+        localStorage.clear()
+        localStorage.setItem("cepUsers", JSON.stringify(users))
+        localStorage.setItem("cepList", JSON.stringify(ceps))
+
+        window.location.href = "../../index.html"
     })
 }

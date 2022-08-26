@@ -40,17 +40,47 @@
         <nav class="sidebar">
             <ul>
                 <li class="signout">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <i class="fa-solid fa-arrow-right-from-bracket" id="logout"></i>
                 </li>
             </ul>
         </nav>
         <div class="fetch">
             <div class="fetch-header">
-                <h1 id="title">Lista de CEPS</h1>
+                <h1 id="title">Busque algum CEP</h1>
                 <i class="fa-solid fa-trash" id="trash-all"></i>
             </div>
 
             <div id="cep-list"></div>
+        </div>
+        <div class="form">
+            <h1>Atualizar informações do CEP</h1>
+
+            <form id="form">
+                <p id="form-cep">Selecione um CEP</p>
+                <div class="group-input">
+                    <input type="text" placeholder="Número do imóvel" id="house-number">
+                    <input type="text" placeholder="Complemento" id="house-complement">
+                </div>
+                <input type="text" placeholder="Ponto de referência" id="house-reference">
+                <div class="group-input">
+                    <span>
+                        <input type="radio" name="location" value="fa-home" id="location_1" checked>
+                        <label for="location_1">Casa</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="location" value="fa-briefcase" id="location_2">
+                        <label for="location_2">Trabalho</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="location" value="fa-school" id="location_3">
+                        <label for="location_3">Escola</label>
+                    </span>
+                </div>
+
+                <div class="group-input">
+                    <button type="submit" id="handle-change">Alterar</button>
+                </div>
+            </form>
         </div>
     </section>
 

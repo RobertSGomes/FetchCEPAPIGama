@@ -3,7 +3,7 @@ section {
     grid-template-columns: 65px auto 500px;
     grid-template-rows: 65px auto;
     grid-template-areas: "nav nav nav"
-        "side fetch list";
+        "side fetch form";
 
     height: 100vh;
     width: 100%;
@@ -90,6 +90,15 @@ section .navbar ul div input {
     outline: none;
     border: 3px solid var(--purple);
     border-radius: 10px;
+
+    appearance: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
 }
 
 section .navbar ul div input:focus {
@@ -144,10 +153,12 @@ section .sidebar li i:hover {
     justify-content: space-between;
 
     margin-bottom: 35px;
+
+    position: relative;
 }
 
 .fetch .fetch-header i {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -159,6 +170,9 @@ section .sidebar li i:hover {
     border-radius: 10px;
 
     cursor: pointer;
+
+    position: absolute;
+    right: 0;
 }
 
 .fetch .fetch-header i:hover {
@@ -183,4 +197,140 @@ section .sidebar li i:hover {
 
     border-radius: 10px;
     border: 1px solid #CCD1CF;
+}
+
+.fetch .normal-cep i {
+    color: var(--purple);
+    font-size: 32px;
+}
+
+.fetch .card-footer {
+    display: flex;
+    gap: 15px;
+}
+
+.fetch .card-footer .select-cep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    color: white;
+    border-radius: 10px;
+    border: 3px solid var(--purple);
+    background-color: var(--purple);
+
+    cursor: pointer;
+}
+
+.fetch .card-footer .select-cep:hover {
+    border: 3px solid var(--green);
+    background-color: var(--green);
+}
+
+.fetch .card-footer .delete-cep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    color: white;
+    border-radius: 10px;
+    border: 3px solid lightcoral;
+    background-color: lightcoral;
+
+    cursor: pointer;
+}
+
+.fetch .card-footer .delete-cep:hover {
+    border: 3px solid red;
+    background-color: red;
+}
+
+.form {
+    grid-area: form;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 50px;
+    overflow-y: auto;
+
+    background: #F5F5F5;
+    border-left: 1px solid #CCD1CF;
+}
+
+.form h1 {
+    margin-bottom: 35px;
+}
+
+.form p {
+    text-align: center;
+
+    color: #505050;
+}
+
+.form form {
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+
+    width: 100%;
+}
+
+.form form input:not(input[type="radio"]) {
+    width: 100%;
+    padding: 10px 15px;
+
+    font-size: 14px;
+
+    outline: none;
+    border: 3px solid var(--purple);
+    border-radius: 10px;
+}
+
+.form form input::placeholder {
+    color: #505050;
+}
+
+.form form input::placeholder {
+    color: #505050;
+}
+
+.form form input[type="radio"] {
+    margin-right: 5px;
+}
+
+.form form .group-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.form form .group-input button {
+    width: 100%;
+    padding: 10px 15px;
+
+    font-weight: 700;
+    color: var(--green);
+    text-transform: uppercase;
+    background-color: white;
+
+    outline: none;
+    border: 3px solid var(--green);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.form form .group-input button:hover {
+    color: white;
+    background-color: var(--green);
 }
