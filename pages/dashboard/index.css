@@ -199,17 +199,25 @@ section .sidebar li i:hover {
     border: 1px solid #CCD1CF;
 }
 
-.fetch .normal-cep i {
+.fetch .card .card-header {
+    width: 100px;
+}
+
+.fetch .card .card-header i {
     color: var(--purple);
     font-size: 32px;
 }
 
-.fetch .card-footer {
+.fetch .card .card-body {
+    width: 100%;
+}
+
+.fetch .card .card-footer {
     display: flex;
     gap: 15px;
 }
 
-.fetch .card-footer .select-cep {
+.fetch .card .card-footer .select-cep {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,12 +233,12 @@ section .sidebar li i:hover {
     cursor: pointer;
 }
 
-.fetch .card-footer .select-cep:hover {
+.fetch .card .card-footer .select-cep:hover {
     border: 3px solid var(--green);
     background-color: var(--green);
 }
 
-.fetch .card-footer .delete-cep {
+.fetch .card .card-footer .delete-cep {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,7 +254,7 @@ section .sidebar li i:hover {
     cursor: pointer;
 }
 
-.fetch .card-footer .delete-cep:hover {
+.fetch .card .card-footer .delete-cep:hover {
     border: 3px solid red;
     background-color: red;
 }
