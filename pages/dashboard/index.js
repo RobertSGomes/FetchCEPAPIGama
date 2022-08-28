@@ -146,6 +146,8 @@ function fetchCep() {
     fetch(url).then(async response => {
         let data = await response.json()
 
+        console.log(data)
+
         if (isCepUndefined(data)) return
 
         cepClass.cep = {
@@ -154,12 +156,6 @@ function fetchCep() {
         }
 
         createCards(cepClass.cep)
-    }).catch((e) => {
-        swal(
-            'Erro!',
-            "CEP inválido",
-            'warning'
-        )
     })
 
     inpCep.value = null
