@@ -141,12 +141,10 @@ function fetchCep() {
     if (!validateFetch()) return
 
     let newCep = inpCep.value.replace("-", ""),
-        url = `http://viacep.com.br/ws/${newCep}/json/`
+        url = `https://viacep.com.br/ws/${newCep}/json/`
 
     fetch(url).then(async response => {
         let data = await response.json()
-
-        console.log(data)
 
         if (isCepUndefined(data)) return
 
@@ -156,6 +154,12 @@ function fetchCep() {
         }
 
         createCards(cepClass.cep)
+    }).catch((e) => {
+        swal(
+            'Erro!',
+            "CEP inválido",
+            'warning'
+        )
     })
 
     inpCep.value = null
